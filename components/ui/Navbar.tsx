@@ -1,5 +1,6 @@
-import { Text, useTheme } from "@nextui-org/react";
+import { Link, Text, useTheme } from "@nextui-org/react";
 import Image from "next/image";
+import NextLink from "next/link";
 import React from "react";
 
 export function Navbar() {
@@ -30,15 +31,20 @@ export function Navbar() {
               width={70}
               height={70}
             />
-            <Text color="white" h2>
-              P
-            </Text>
-            <Text color="white" h3>
-              okemon
-            </Text>
+            <NextLink href={"/"}>
+              <Link>
+                <Text color="white" h2>
+                  P
+                </Text>
+                <Text color="white" h3>
+                  okemon
+                </Text>
+              </Link>
+            </NextLink>
           </div>
-
-          <Text color="white">Favoritos</Text>
+          <NextLink href={"/favorites"}>
+            <Text color="white">Favoritos</Text>
+          </NextLink>
         </nav>
       </header>
     </>
